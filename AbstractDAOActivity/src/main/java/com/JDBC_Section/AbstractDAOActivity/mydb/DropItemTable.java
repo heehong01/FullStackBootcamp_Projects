@@ -7,11 +7,11 @@ import java.sql.Statement;
 
 import static com.AbstractDAOActivity.Constants.*;
 
-public class DropCustomerTable {
-    public static void dropCustomerTable() {
+public class DropItemTable {
+    public static void main(String[] args) {
         String url = JDBC_MYSQL_LOCALHOST_MYDB;
         Connection con;
-        String dropString = "DROP TABLE customer";
+        String dropString = "DROP TABLE item";
         Statement stmt;
 
         try{
@@ -26,7 +26,7 @@ public class DropCustomerTable {
             stmt = con.createStatement();
             stmt.executeUpdate(dropString);
 
-            System.out.println("CUSTOMER table is successfully dropped");
+            System.out.println("ITEM table is successfully dropped");
             stmt.close();
             con.close();
         }catch (SQLException ex){

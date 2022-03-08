@@ -8,7 +8,7 @@ import java.sql.Statement;
 import static com.AbstractDAOActivity.Constants.*;
 
 public class CreateCustomersTable {
-    public static void createCustomersTable(){
+    public static void main(String[] args) {
         String url = JDBC_MYSQL_LOCALHOST_MYDB;
         Connection con;
         String createString;

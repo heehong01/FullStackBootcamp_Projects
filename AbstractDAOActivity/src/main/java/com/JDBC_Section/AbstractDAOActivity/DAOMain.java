@@ -9,21 +9,12 @@ import com.AbstractDAOActivity.mydb.*;
 
 public class DAOMain {
     public static void main(String[] args) {
-
-        //Initialization of Customers and Item table
-        initializationOfTablesCustomersAndItem();
-
-        insertSomeDataIntoTablesCustomerAndItem();
-
         CustomerDAOI customerDAOI = new CustomerDAOImpl();
         ItemDAOI itemDAOI = new ItemDAOImpl();
-
 
         itemInsertDeleteAndGetAllItemFunctions(itemDAOI);
 
         customerGetAddAndRemoveCustomer(customerDAOI);
-
-        removingTables();
     }
 
     private static void customerGetAddAndRemoveCustomer(CustomerDAOI customerDAOI) {
@@ -89,22 +80,6 @@ public class DAOMain {
                 + " | " + customer.getFName()
                 + " | " + customer.getLName());
         System.out.println();
-    }
-
-
-    private static void initializationOfTablesCustomersAndItem() {
-        CreateCustomersTable.createCustomersTable();
-        CreateItemsTable.createItemsTable();
-    }
-
-    private static void insertSomeDataIntoTablesCustomerAndItem() {
-        InsertCustomersTable.insertCustomersTable();
-        InsertItemsTable.insertItemsTable();
-    }
-
-    private static void removingTables() {
-        DropCustomerTable.dropCustomerTable();
-        DropItemTable.dropItemTable();
     }
 }
 /*Database Tables:

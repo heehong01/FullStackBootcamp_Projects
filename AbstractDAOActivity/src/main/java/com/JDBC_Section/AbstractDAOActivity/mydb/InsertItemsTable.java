@@ -6,7 +6,7 @@ import static com.AbstractDAOActivity.Constants.*;
 import static com.AbstractDAOActivity.Constants.PASSWORD;
 
 public class InsertItemsTable {
-    public static void insertItemsTable(){
+    public static void main(String[] args) {
         String url = JDBC_MYSQL_LOCALHOST_MYDB;
         Connection con;
         Statement stmt;

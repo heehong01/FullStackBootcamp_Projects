@@ -5,7 +5,7 @@ import java.sql.*;
 import static com.AbstractDAOActivity.Constants.*;
 
 public class InsertCustomersTable {
-    public static void insertCustomersTable(){
+    public static void main(String[] args) {
         String url = JDBC_MYSQL_LOCALHOST_MYDB;
         Connection con;
         Statement stmt;
@@ -53,10 +53,3 @@ public class InsertCustomersTable {
         }
     }
 }
-
-/*
-            //INSERT ROWS OF DATA TO ITEM TABLES
-
-            //INSERT ROWS OF DATA TO CUSTOMER TABLES
-
-*/

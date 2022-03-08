@@ -4,7 +4,7 @@ import java.sql.*;
 
 import static com.AbstractDAOActivity.Constants.*;
 
-public class AbstractDAO {
+public abstract class AbstractDAO {
 
     protected Connection conn = null;
     protected PreparedStatement ps = null;

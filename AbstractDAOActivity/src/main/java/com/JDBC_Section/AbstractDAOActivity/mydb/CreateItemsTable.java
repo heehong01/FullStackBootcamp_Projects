@@ -5,7 +5,7 @@ import java.sql.*;
 import static com.AbstractDAOActivity.Constants.*;
 
 public class CreateItemsTable {
-    public static void createItemsTable() {
+    public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/mydb";
         Connection con;
         String createString;
