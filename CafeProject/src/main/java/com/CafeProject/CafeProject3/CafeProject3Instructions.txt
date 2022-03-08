@@ -1,0 +1,24 @@
+Project 3
+
+We will continue the Cafe concept for this exercise.
+
+Create two new abstract methods in the Product class: addOptions() and
+printOptions(); Implement these methods in each of the subclasses.
+
+Write a program that prompts the user to select products from the cafe
+and select options attached to those products
+(e.g, "Would you like sugar with the coffee?"), but this time include
+store and shopping cart classes and include classes for each item
+(you may use the classes created in previous exercises and add these
+products to lists in the store and shopping cart classes). Options may
+or may not incur additional cost, but you should have at least one
+product that has options which do incur additional cost. Have the user
+select items from the store and specify any options. Add the items to
+the shopping cart. Print out a list of each item with price, quantity
+and item subtotal along with the purchase subtotal, sales tax and
+purchase total after the user is done selecting items (i.e., there
+should be a choice on the menu to “check out” at which time the
+purchase totals are displayed and the application quits.
+
+Optional: Create and implement a custom exception
+

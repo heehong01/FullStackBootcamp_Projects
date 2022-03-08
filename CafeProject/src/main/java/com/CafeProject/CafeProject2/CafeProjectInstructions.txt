@@ -1,0 +1,40 @@
+
+Project 2
+
+Inheritance & Abstract Classes
+
+Make the Product class in the previous cafe exercise an abstract class
+and make the method calculateProductSubtotal in the Product class an
+abstract method. Now create three new classes (Coffee, Espresso,
+Cappuccino) which each extend the Product class. You will get an error
+in the new classes once you extend them due to the missing implementation
+of the calculateProductSubtotal( ) method. If you hover over the class
+name with this error you will be given the option to add the method.
+Go ahead and click the link to add the method (alternatively, you can
+simply write the method yourself). You should end up with an empty method
+with the @Override annotation. Do this for each class.
+
+In the Coffee class, add the boolean attributes, sugar and milk. Create
+a no-arg constructor which calls the super constructor and assigns this.
+milk and this.sugar to false. Create a constructor which accepts five
+attributes (three from Product and two from Coffee) and passes three
+arguments to the super constructor and assign this.milk and this.sugar
+to the arguments passed to the constructor. Create getters and setters
+for the two added attributes. Implement the calculateProductSubtotal
+method.
+
+In the Espresso class, add the boolean attributes extraShot and macchiato
+and complete the process as with the Coffee class. In the
+calculateProductSubtotal method, add $2.00 to each item with an extra
+shot and add $1.00 to each item made in macchiato style.
+
+In the Cappuccino class, add the boolean attributes peppermint and
+whippedCream and complete the rest of the class as with the Coffee and
+Espresso classes. In the calculateProductSubtotal method, add $2.00 to
+each item with peppermint and add $1.00 to each item with whipped cream.
+
+Rewrite the CafeApp class to utilize the Scanner class to accept orders
+for each product and, as before, print the name, description, quantity,
+and product subtotal for each item along with the sales subtotal, sales
+tax, and sales total.
+
