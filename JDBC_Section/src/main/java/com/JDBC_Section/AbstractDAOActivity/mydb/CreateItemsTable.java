@@ -1,8 +1,8 @@
-package com.AbstractDAOActivity.mydb;
+package com.JDBC_Section.AbstractDAOActivity.mydb;
+
+import com.JDBC_Section.AbstractDAOActivity.Constants;
 
 import java.sql.*;
-
-import static com.AbstractDAOActivity.Constants.*;
 
 public class CreateItemsTable {
     public static void main(String[] args) {
@@ -16,14 +16,14 @@ public class CreateItemsTable {
         Statement stmt;
 
         try{
-            Class.forName(MYSQL_CJ_JDBC_DRIVER);
+            Class.forName(Constants.MYSQL_CJ_JDBC_DRIVER);
 
         }catch(java.lang.ClassNotFoundException e){
             System.err.print("ClassNotFoundException: ");
             System.err.println(e.getMessage());
         }
         try{
-            con = DriverManager.getConnection(url, USERNAME, PASSWORD);
+            con = DriverManager.getConnection(url, Constants.USERNAME, Constants.PASSWORD);
 
             stmt = con.createStatement();
             stmt.executeUpdate(createString);

@@ -1,6 +1,6 @@
-package com.AbstractDAOActivity.Customer;
+package com.JDBC_Section.AbstractDAOActivity.Customer;
 
-import com.AbstractDAOActivity.AbstractDAO;
+import com.JDBC_Section.AbstractDAOActivity.AbstractDAO;
 
 import java.sql.SQLException;
 

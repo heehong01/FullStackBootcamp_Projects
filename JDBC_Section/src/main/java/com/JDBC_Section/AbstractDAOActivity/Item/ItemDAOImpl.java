@@ -1,6 +1,6 @@
-package com.AbstractDAOActivity.Item;
+package com.JDBC_Section.AbstractDAOActivity.Item;
 
-import com.AbstractDAOActivity.AbstractDAO;
+import com.JDBC_Section.AbstractDAOActivity.AbstractDAO;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

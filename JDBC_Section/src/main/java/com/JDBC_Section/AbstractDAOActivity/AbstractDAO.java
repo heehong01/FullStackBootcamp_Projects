@@ -1,8 +1,8 @@
-package com.AbstractDAOActivity;
+package com.JDBC_Section.AbstractDAOActivity;
 
 import java.sql.*;
 
-import static com.AbstractDAOActivity.Constants.*;
+import static com.JDBC_Section.AbstractDAOActivity.Constants.*;
 
 public abstract class AbstractDAO {
 

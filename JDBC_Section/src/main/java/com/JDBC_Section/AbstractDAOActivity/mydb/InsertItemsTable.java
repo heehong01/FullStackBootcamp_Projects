@@ -1,25 +1,24 @@
-package com.AbstractDAOActivity.mydb;
+package com.JDBC_Section.AbstractDAOActivity.mydb;
+
+import com.JDBC_Section.AbstractDAOActivity.Constants;
 
 import java.sql.*;
 
-import static com.AbstractDAOActivity.Constants.*;
-import static com.AbstractDAOActivity.Constants.PASSWORD;
-
 public class InsertItemsTable {
     public static void main(String[] args) {
-        String url = JDBC_MYSQL_LOCALHOST_MYDB;
+        String url = Constants.JDBC_MYSQL_LOCALHOST_MYDB;
         Connection con;
         Statement stmt;
         String query = "SELECT * FROM item";
 
         try{
-            Class.forName(MYSQL_CJ_JDBC_DRIVER);
+            Class.forName(Constants.MYSQL_CJ_JDBC_DRIVER);
         }catch (java.lang.ClassNotFoundException e){
             System.err.println("ClassNotFoundException: " +
                     e.getMessage());
         }
         try{
-            con = DriverManager.getConnection(url, USERNAME, PASSWORD);
+            con = DriverManager.getConnection(url, Constants.USERNAME, Constants.PASSWORD);
             stmt = con.createStatement();
 
             stmt.executeUpdate("INSERT INTO ITEM " +

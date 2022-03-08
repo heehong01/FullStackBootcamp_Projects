@@ -1,4 +1,4 @@
-package com.AbstractDAOActivity.Item;
+package com.JDBC_Section.AbstractDAOActivity.Item;
 
 import java.util.List;
 

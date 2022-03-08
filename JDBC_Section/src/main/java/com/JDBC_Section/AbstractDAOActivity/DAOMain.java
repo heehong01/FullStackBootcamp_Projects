@@ -1,11 +1,13 @@
-package com.AbstractDAOActivity;
+package com.JDBC_Section.AbstractDAOActivity;
 
-import java.sql.SQLException;
 import java.util.List;
 
-import com.AbstractDAOActivity.Customer.*;
-import com.AbstractDAOActivity.Item.*;
-import com.AbstractDAOActivity.mydb.*;
+import com.JDBC_Section.AbstractDAOActivity.Customer.Customer;
+import com.JDBC_Section.AbstractDAOActivity.Item.Item;
+import com.JDBC_Section.AbstractDAOActivity.Item.ItemDAOI;
+import com.JDBC_Section.AbstractDAOActivity.Item.ItemDAOImpl;
+import com.JDBC_Section.AbstractDAOActivity.Customer.*;
+import com.JDBC_Section.AbstractDAOActivity.Item.*;
 
 public class DAOMain {
     public static void main(String[] args) {

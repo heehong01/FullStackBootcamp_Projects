@@ -1,4 +1,4 @@
-package com.AbstractDAOActivity.Customer;
+package com.JDBC_Section.AbstractDAOActivity.Customer;
 
 public interface CustomerDAOI {
         enum SQL {

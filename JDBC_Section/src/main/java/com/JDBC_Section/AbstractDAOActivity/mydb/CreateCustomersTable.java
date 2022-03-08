@@ -1,15 +1,15 @@
-package com.AbstractDAOActivity.mydb;
+package com.JDBC_Section.AbstractDAOActivity.mydb;
+
+import com.JDBC_Section.AbstractDAOActivity.Constants;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import static com.AbstractDAOActivity.Constants.*;
-
 public class CreateCustomersTable {
     public static void main(String[] args) {
-        String url = JDBC_MYSQL_LOCALHOST_MYDB;
+        String url = Constants.JDBC_MYSQL_LOCALHOST_MYDB;
         Connection con;
         String createString;
         createString = "CREATE TABLE customer" +
@@ -20,14 +20,14 @@ public class CreateCustomersTable {
         Statement stmt;
 
         try{
-            Class.forName(MYSQL_CJ_JDBC_DRIVER);
+            Class.forName(Constants.MYSQL_CJ_JDBC_DRIVER);
 
         }catch(java.lang.ClassNotFoundException e){
             System.err.print("ClassNotFoundException: ");
             System.err.println(e.getMessage());
         }
         try{
-            con = DriverManager.getConnection(url, USERNAME, PASSWORD);
+            con = DriverManager.getConnection(url, Constants.USERNAME, Constants.PASSWORD);
 
             stmt = con.createStatement();
             stmt.executeUpdate(createString);

@@ -1,4 +1,4 @@
-package com.AbstractDAOActivity;
+package com.JDBC_Section.AbstractDAOActivity;
 
 public final class Constants {
     public static final String MYSQL_CJ_JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";

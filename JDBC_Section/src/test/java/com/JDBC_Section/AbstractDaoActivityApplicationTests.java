@@ -1,4 +1,4 @@
-package com.AbstractDAOActivity;
+package com.JDBC_Section;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
