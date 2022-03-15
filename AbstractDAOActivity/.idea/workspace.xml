@@ -4,31 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00222381-55b2-4a19-89cb-b9bc135e9ec1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/AbstractDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/AbstractDaoActivityApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/Customer/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/Customer/CustomerDAOI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/Customer/CustomerDAOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/DAOMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/Item/Item.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/Item/ItemDAOI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/Item/ItemDAOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/mydb/CreateCustomersTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/mydb/CreateItemsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/mydb/DropCustomerTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/mydb/DropItemTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/mydb/InsertCustomersTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/AbstractDAOActivity/mydb/InsertItemsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/AbstractDAOActivity/AbstractDaoActivityApplicationTests.java" beforeDir="false" />
+    <list default="true" id="8159573a-b072-4a6d-a499-71be3be24320" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/controller/CreatingUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/controller/DeletingUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/controller/FindingUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/controller/UpdatingUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JDBC_Section/src/main/java/com/JDBC_Section/Practice/QueryPractice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/CreateStoresTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/DropStoresTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/DropStoresTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/InsertStoresTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/InsertStoresTable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +43,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="266xPOfVfQSRB9H92uy6nAdgil0" />
+  <component name="ProjectId" id="269Z9RtdRGsU7a0kEZo8N8yJfQn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -59,121 +53,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.AbstractDAOActivity" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.DAOMain">
-    <configuration name="CreateCustomersTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.AbstractDAOActivity.mydb.CreateCustomersTable" />
-      <module name="JDBC_Section" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.AbstractDAOActivity.mydb.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateItemsTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.AbstractDAOActivity.mydb.CreateItemsTable" />
-      <module name="JDBC_Section" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.AbstractDAOActivity.mydb.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DAOMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.AbstractDAOActivity.AbstractDAOActivity.Customer.DAOMain" />
-      <module name="JDBC_Section" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.JDBC_Section.AbstractDAOActivity.Customer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InsertCustomersTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.AbstractDAOActivity.mydb.InsertCustomersTable" />
-      <module name="JDBC_Section" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.AbstractDAOActivity.mydb.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InsertItemsTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.AbstractDAOActivity.mydb.InsertItemsTable" />
-      <module name="JDBC_Section" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.AbstractDAOActivity.mydb.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="JDBC_Section" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="JDBC_Section" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.DAOMain" />
-        <item itemvalue="Application.InsertItemsTable" />
-        <item itemvalue="Application.InsertCustomersTable" />
-        <item itemvalue="Application.CreateItemsTable" />
-        <item itemvalue="Application.CreateCustomersTable" />
-      </list>
-    </recent_temporary>
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="00222381-55b2-4a19-89cb-b9bc135e9ec1" name="Changes" comment="" />
-      <created>1646757812107</created>
+      <changelist id="8159573a-b072-4a6d-a499-71be3be24320" name="Changes" comment="" />
+      <created>1646837611077</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1646757812107</updated>
+      <updated>1646837611077</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
