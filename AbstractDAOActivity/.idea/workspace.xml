@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8159573a-b072-4a6d-a499-71be3be24320" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/controller/CreatingUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/controller/DeletingUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/controller/FindingUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/controller/UpdatingUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JDBC_Section/src/main/java/com/JDBC_Section/Practice/QueryPractice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/CreateStoresTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Constants.java" afterDir="false" />
+    <list default="true" id="8159573a-b072-4a6d-a499-71be3be24320" name="Changes" comment="ABSTRACT DAO">
+      <change afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/AbstractDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/StoreDAOI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Stores.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/StoresDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/DropStoresTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/DropStoresTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/InsertStoresTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/InsertStoresTable.java" afterDir="false" />
@@ -53,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -64,6 +53,36 @@
       <option name="presentableId" value="Default" />
       <updated>1646837611077</updated>
     </task>
+    <task id="LOCAL-00001" summary="ABSTRACT DAO">
+      <created>1647379332117</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647379332117</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ABSTRACT DAO">
+      <created>1647379403319</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647379403319</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ABSTRACT DAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="ABSTRACT DAO" />
   </component>
 </project>
