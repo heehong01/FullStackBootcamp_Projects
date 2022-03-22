@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8159573a-b072-4a6d-a499-71be3be24320" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/controller/CreatingUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/controller/DeletingUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/controller/FindingUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/controller/UpdatingUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/java/com/test/hib/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HibernateJPABeginner/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JDBC_Section/src/main/java/com/JDBC_Section/Practice/QueryPractice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/CreateStoresTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/DropStoresTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/DropStoresTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/InsertStoresTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectTest 2/src/main/java/com/ProjectTestConnectJDBCWithJUnit5/Admin/InsertStoresTable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
