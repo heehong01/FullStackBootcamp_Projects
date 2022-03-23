@@ -1,46 +1,126 @@
 package jpa.mainrunner;
 
+import java.util.List;
 import java.util.Scanner;
+
+import jpa.Service.CourseService;
+import jpa.Service.StudentService;
+import jpa.entitymodels.Course;
+import jpa.entitymodels.Student;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 
 public class SMSRunner {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.printf("Are you a(n)\n" +
-                "1. Student\n" +
-                "2. quit\n" +
-                "Please, enter 1 or 2\n");
-        while(input.nextInt() != 2){
-            input.nextLine();
-            System.out.println("Enter Your Email:");
-            String email = input.nextLine();
-            System.out.println(email);
-            System.out.println("Enter Your Password:");
-            String password = input.nextLine();
-            System.out.println(password);
-        }
-        System.out.println("You have been signed out.");
-        input.close();
+    private Scanner input;
+    private StringBuilder sb;
+
+    private CourseService courseService;
+    private StudentService studentService;
+    private Student currentStudent;
+
+    public SMSRunner(){
+        input = new Scanner(System.in);
+        sb = new StringBuilder();
+        courseService = new CourseService();
+        studentService = new StudentService();
     }
-    /*main -
 
--This method displays and prompts the user to select one of the following with the  option:
+    public static void main(String[] args) {
+        SMSRunner sms = new SMSRunner();
+        sms.run();
+    }
+
+    private void run() {
+        //Login or Quit
+        switch(mainMenu()){
+            case 1:
+                if(studentLogin()){
+                    registerMenu();
+                }
+                break;
+
+            case 2:
+                System.out.println("Goodbye!");
+                break;
+        }
+    }
+
+    private int mainMenu() {
+        System.out.printf("1. Student Login\n" +
+                "2. Quit Application\n" +
+                "Please Enter Selection: \n");
+        return input.nextInt();
+    }
 
 
+    private boolean studentLogin() {
+        boolean returnValue = false;
+        System.out.println("Enter your email address: ");
+        String email = input.next();
+        System.out.println("Enter your password: ");
+        String password = input.next();
 
-1. Student: This allows the user to enter his/her email and password and check whether or not those credentials are valid, in order to log in. If the credentials are invalid the program should end with an appropriate message to the student.
+        Student student =  studentService.getStudentByEmail(email);
+        if(student != null){
+            currentStudent = student;
+        }
+        if(currentStudent != null && studentService.validateStudent(email, password)){
+            List<Course> courses = studentService.getStudentCourses(email);
+            System.out.println("My Classes");
+            for(Course course : courses){
+                System.out.println(course);
+            }
+            returnValue = true;
+        }
+        else{
+            System.out.println("User Validation failed. GoodBye!");
+        }
+        return returnValue;
+    }
 
+    private void registerMenu() {
+        List<Course> studentCourse = studentService.getStudentCourses(currentStudent.getsEmail());
+        System.out.printf("Courses %s is registered in:\n", currentStudent.getsEmail());
+        System.out.printf("%5s%30s%30s\n", "ID", "Course", "Instructor");
+        for(Course course : studentCourse){
+            System.out.println(course);
+        }
+        System.out.println();
+        System.out.printf("1. Register a class\n" +
+                "2. Logout\n" +
+                "Please Enter Selection: \n");
 
+        switch (input.nextInt()){
+            case 1:
+                System.out.println("WORKING1");
+                List<Course> allCourses = courseService.getAllCourses();
+                System.out.printf("%5s%30s%30s\n", "ID", "Course", "Instructor");
+                for(Course course : allCourses) {
+                    System.out.printf("%5d%30s%30s\n",
+                            course.getcId(),
+                            course.getcName(),
+                            course.getcInstructorName());
+                }
 
-If the credentials are valid, the student is logged in and all the classes the Student is registered to should be displayed. Displays and prompt the student to select one of the following two additional numeric (1 or 2) options that are available:
+                System.out.println();
+                System.out.println("Enter Course Number: ");
+                int courseId = input.nextInt();
+                studentService.registerStudentToCourse(currentStudent.getsEmail(), courseId);
+                studentCourse = studentService.getStudentCourses(currentStudent.getsEmail());
+                System.out.printf("Courses %s is registered in:\n", currentStudent.getsEmail());
+                System.out.printf("%5s%30s%30s\n", "ID", "Course", "Instructor");
 
-·   1) Register to Class: This displays all the courses in the database and allows the student to select a course in which the student wished to be registered. If the Student is already registered in that course, display the message "You are already registered in that course!", otherwise, register the student to that course and save this result in your database. Also, show the updated registered courses list for that student. After that end the program with an appropriate message.
+                for(Course course : studentCourse){
+                    System.out.println(course);
+                }
+                System.out.println();
+                break;
 
-·   2) Logout: Which ends the program with an appropriate message.
+            case 2:
+            default:
+                System.out.println("GoodBye!");
+        }
+    }
 
-
-
-2. quit: which ends the program with an appropriate message.*/
 
 }

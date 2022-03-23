@@ -17,7 +17,7 @@ public class CourseService implements CourseDAO {
         SessionFactory factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
 
-        String hql = "FROM course";
+        String hql = "FROM Course";
         TypedQuery query = session.createQuery(hql);
         List<Course> results = query.getResultList();
 

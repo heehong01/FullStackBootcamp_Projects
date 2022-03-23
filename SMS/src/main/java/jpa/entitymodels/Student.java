@@ -55,4 +55,12 @@ public class Student {
         this.sPass = sPass;
     }
 
+    public List<Course> getsCourses() {
+        return sCourses;
+    }
+
+    public void setsCourses(List<Course> sCourses) {
+        this.sCourses = sCourses;
+    }
+
 }

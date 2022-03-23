@@ -36,7 +36,7 @@ public class StudentService implements StudentDAO {
         factory = new Configuration().configure().buildSessionFactory();
         session = factory.openSession();
 //------Hibernate Named Query -----------------
-        hql = "FROM STUDENT WHERE email=:email";
+        hql = "FROM Student WHERE sEmail = :email";
         query = session.createQuery(hql);
         query.setParameter("email", sEmail);
         Student result = (Student) query.getSingleResult();
@@ -50,10 +50,10 @@ public class StudentService implements StudentDAO {
     public boolean validateStudent(String sEmail, String sPassword) {
         factory = new Configuration().configure().buildSessionFactory();
         session = factory.openSession();
-        hql = "FROM STUDENT WHERE email=:email";
+        hql = "FROM Student WHERE sEmail = :email";
         query = session.createQuery(hql);
         query.setParameter("email", sEmail);
-        Student student = (Student) query.getResultList();
+        Student student = (Student) query.getSingleResult();
         session.close();
         factory.close();
         if(student.getsPass().equals(sPassword)){
@@ -77,28 +77,27 @@ public class StudentService implements StudentDAO {
             }
         }
         if(!isRegistered){
-            List<String, Integer> studentCourse =
-            hql = "FROM Course WHERE id=:id";
+            hql = "FROM Course WHERE cId = :id";
             query = session.createQuery(hql);
             query.setParameter("id", cId);
-            List<Course> courseList =
-
-
-        }
-            //session.save();
+            studentCourses.add((Course) query.getSingleResult());
+            student.setsCourses(studentCourses);
+            session.merge(sEmail, student);
             t.commit();
         }
-
+        factory.close();
+        session.close();
     }
+
 
     @Override
     public List<Course> getStudentCourses(String sEmail) {
         factory = new Configuration().configure().buildSessionFactory();
         session = factory.openSession();
-        hql= " FROM Student_Course WHERE email=:email";
+        hql = "FROM Student WHERE sEmail = :email ";
         query = session.createQuery(hql);
-        query.setParameter("email", sEmail);
-        List<Course> listCourses= query.getResultList();
-        return listCourses;
+        query.setParameter("email" , sEmail);
+        Student student = (Student) query.getSingleResult();
+        return student.getsCourses();
     }
 }
