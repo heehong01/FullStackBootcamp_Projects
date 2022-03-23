@@ -12,7 +12,7 @@ public class CreateStudent {
         Session session = factory.openSession();
         Transaction t = session.beginTransaction();
 
-        Student student = new Student("hluckham0@google.ru", "Hazel Luckham", "X1uZcoIh0dj");
+        /*Student student = new Student("hluckham0@google.ru", "Hazel Luckham", "X1uZcoIh0dj");
         Student student1 = new Student("sbowden1@yellowbook.com", "Sonnnie Bowden", "SJc4aWSU");
         Student student2 = new Student("qllorens2@howstuffworks.com", "Quillan Llorens", "W6rJuxd");
         Student student3 = new Student("cstartin3@flickr.com", "Clem Startin", "XYHzJ1S");
@@ -33,7 +33,7 @@ public class CreateStudent {
         session.save(student7);
         session.save(student8);
         session.save(student9);
-
+*/
         
         t.commit();
         System.out.println("successfully saved");

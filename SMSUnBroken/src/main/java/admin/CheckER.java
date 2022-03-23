@@ -14,14 +14,15 @@ public class CheckER {
         SessionFactory factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
 
-        String hql = "FROM Student WHERE email=:email";
+        String hql = "FROM Course";
         TypedQuery query = session.createQuery(hql);
-        List<Student> results = query.getResultList();
-        for(Student s: results){
-            System.out.println("User Id: " + s.getsEmail()+ "|"
-                    + " C name: " + s.getsName() +" | "
-                    + " I NAME: " + s.getsPass() +" | ");
-        }
+        query.setParameter("email", "he");
+        Student results = (Student) query.getSingleResult();
+
+            System.out.println("User Id: " + results.getsEmail()+ "|"
+                    + " C name: " + results.getsName() +" | "
+                    + " I NAME: " + results.getsPass() +" | ");
+
         factory.close();
         session.close();
     }
