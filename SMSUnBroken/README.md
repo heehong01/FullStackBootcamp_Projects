@@ -1,14 +1,5 @@
 ## School Management Service
 
-
-
-So in the README.md file of your SBA project, the following is what I expect to see:
-How you create the tables
-How you populate the tables
-If you have test code or not
-If the test code succeeded or not
-
-
     /*main -
 
 -This method displays and prompts the user to select 

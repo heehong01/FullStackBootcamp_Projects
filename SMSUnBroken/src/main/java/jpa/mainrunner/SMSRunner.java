@@ -3,19 +3,13 @@ package jpa.mainrunner;
 import java.util.List;
 import java.util.Scanner;
 
-import admin.CreateCourseTable;
-import admin.CreateStudentTable;
 import jpa.Service.CourseService;
 import jpa.Service.StudentService;
 import jpa.entitymodels.Course;
 import jpa.entitymodels.Student;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 
-
-///ADD INPUT MISMATCH EXCEPTION
 public class SMSRunner {
     private Scanner input;
     private StringBuilder sb;
@@ -29,24 +23,8 @@ public class SMSRunner {
         sb = new StringBuilder();
         courseService = new CourseService();
         studentService = new StudentService();
-        initializeTable();
-
     }
-    public void initializeTable(){
-        SessionFactory factory = new Configuration().configure().buildSessionFactory();
-        Session session = factory.openSession();
-        Transaction transaction = session.beginTransaction();
 
-        session.createSQLQuery("DROP TABLE Student_Course;").executeUpdate();
-        session.createSQLQuery("TRUNCATE TABLE Student;").executeUpdate();
-        session.createSQLQuery("TRUNCATE TABLE Course;").executeUpdate();
-
-        new CreateStudentTable(session);
-        new CreateCourseTable(session);
-        transaction.commit();
-        session.close();
-        factory.close();
-    }
     public static void main(String[] args) {
         SMSRunner sms = new SMSRunner();
         sms.run();
@@ -105,10 +83,7 @@ public class SMSRunner {
         System.out.printf("Courses %s is registered in:\n", currentStudent.getsEmail());
         System.out.printf("%5s%30s%30s\n", "ID", "Course", "Instructor");
         for(Course course : studentCourse){
-            System.out.printf("%5d%30s%30s\n",
-                    course.getcId(),
-                    course.getcName(),
-                    course.getcInstructorName());
+            System.out.println(course);
         }
         System.out.println();
         System.out.printf("1. Register a class\n" +
@@ -136,10 +111,7 @@ public class SMSRunner {
                 System.out.printf("%5s%30s%30s\n", "ID", "Course", "Instructor");
 
                 for(Course course : studentCourse){
-                    System.out.printf("%5d%30s%30s\n",
-                            course.getcId(),
-                            course.getcName(),
-                            course.getcInstructorName());
+                    System.out.println(course);
                 }
                 System.out.println();
                 break;

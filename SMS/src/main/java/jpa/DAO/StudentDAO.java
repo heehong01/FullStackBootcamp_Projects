@@ -5,13 +5,13 @@ import jpa.entitymodels.Student;
 import java.util.List;
 
 public interface StudentDAO {
-    public List<Student> getAllStudents();
+    List<Student> getAllStudents();
 
-    public Student getStudentByEmail(String sEmail);
+    Student getStudentByEmail(String sEmail);
 
-    public boolean validateStudent(String sEmail, String sPassword);
+    boolean validateStudent(String sEmail, String sPassword);
 
-    public void registerStudentToCourse(String sEmail, int cId);
+    void registerStudentToCourse(String sEmail, int cId);
 
-    public List<Course> getStudentCourses(String sEmail);
+    List<Course> getStudentCourses(String sEmail);
 }

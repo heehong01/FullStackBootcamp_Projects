@@ -1,34 +1,30 @@
 package jpa.entitymodels;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
+import jdk.jfr.Name;
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
 
 @Entity
 @Table(name="Student")
 public class Student {
 
     @Id
-    @Column(name="email", nullable = false, length = 50)
     private String sEmail;
-
-    @Column(name="name", nullable = false, length = 50)
     private String sName;
-
-    @Column(name="password", nullable = false, length = 50)
     private String sPass;
 
-    @ManyToMany(targetEntity = Course.class, fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-    @JoinTable(name="Student_Course",
-                joinColumns = @JoinColumn(name="id"),
-                inverseJoinColumns = @JoinColumn(name="email"))
+    @ManyToMany(targetEntity = Course.class, cascade = {CascadeType.ALL})
     private List<Course> sCourses;
 
     //No arg constructor
     public Student(){
     }
     public Student(String sEmail, String sName, String sPass, List<Course> sCourses) {
+        super();
         this.sEmail = sEmail;
         this.sName = sName;
         this.sPass = sPass;
@@ -68,18 +64,4 @@ public class Student {
         this.sCourses = sCourses;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-        Student student = (Student) o;
-        return Objects.equals(sEmail, student.sEmail) && Objects.equals(sName, student.sName) && Objects.equals(sPass, student.sPass);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(sEmail, sName, sPass);
-    }
 }
