@@ -2,6 +2,7 @@ package jpa.Service;
 
 import jpa.DAO.CourseDAO;
 import jpa.entitymodels.Course;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -15,16 +16,15 @@ public class CourseService implements CourseDAO {
     @Override
     public List<Course> getAllCourses() {
         SessionFactory factory = new Configuration().configure().buildSessionFactory();
-        Session session = factory.openSession();
-        String hql = "FROM Course";
+        try (factory; Session session = factory.openSession()) {
+            String hql = "FROM Course";
+            TypedQuery query = session.createQuery(hql);
+            List<Course> results = query.getResultList();
+            return results;
+        } catch (HibernateException e) {
+            return null;
+        }
 
-        TypedQuery query = session.createQuery(hql);
-        List<Course> results = query.getResultList();
-
-        factory.close();
-        session.close();
-
-        return results;
     }
 
 }
