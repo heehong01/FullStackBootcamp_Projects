@@ -1,0 +1,21 @@
+.container{
+    background: rgba(0,0,0,0.5) url("../../../../image/MainPages/LoginRegister.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-blend-mode: darken;
+
+    display: flex;
+    justify-content: center;
+}
+
+.sub-container{
+    background-color: whitesmoke;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: auto;
+
+
+}

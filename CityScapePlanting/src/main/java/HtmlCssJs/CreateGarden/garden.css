@@ -1,0 +1,43 @@
+#start{
+    background: rgba(0,0,0,0.5) url("../../../../../image/Garden/GardenQuestionaire.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+#method{
+    background: rgba(0,0,0,0.5) url("../../../../../image/Garden/TypeOfGardenQuestionaire.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+#plants{
+    background: rgba(0,0,0,0.5) url("../../../../../image/Garden/GardenQuestionaire1.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+#places{
+    background: rgba(0,0,0,0.5) url("../../../../../image/Garden/GardenQuestionaire3.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+#living{
+    background: rgba(0,0,0,0.5) url("../../../../../image/Garden/GardenQuestionaire2.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-blend-mode: darken;
+}

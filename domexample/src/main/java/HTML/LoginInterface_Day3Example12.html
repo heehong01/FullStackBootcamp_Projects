@@ -16,40 +16,52 @@
             margin:auto;
             width: 400px;
             height: 500px;
+            box-shadow: 4px 4px 8px gray;
         }
         .form-control{
-            margin:auto;
+            text-align:center;
             background-color: #d3d3d3;
-            text-align: center;
         }
 
         #login{
             background-color: #15a7af;
         }
 
-        .logo{
-            margin:auto;
+
+        .bi-person-fill{
+            al;
+            box-shadow: 4px 4px 8px gray;
             color: white;
             height: 100px;
             width: 100px;
             border-radius:50%;
             background-color: #15a7af;
         }
-
-        #forgot-pass{
+        .row{
+            padding-top: 10%;
+            padding-left: 10%;
+            padding-right: 10%;
+            margin:auto;
             text-align: center;
-            color: orange;
             text-decoration: none;
         }
-
+        a{
+            color:orange;
+        }
+        .title{
+            padding-top: 30%;
+        }
     </style>
 </head>
 <body>
-
+<div class="login-form">
+    <span class="logo" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
+</div>
 <div class="container">
-
+    <div class=" row title">
+        <h1>User Login</h1>
+    </div>
     <div class="row">
-            <span class="logo" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
             <form>
                 <div class="input-group mb-4">
                     <input class="form-control" type="text" placeholder="username">
@@ -58,7 +70,7 @@
                     <input class="form-control" type="password" placeholder="password">
                 </div>
                 <div class="input-group mb-4">
-                    <input class="form-control" type="submit" id="login" placeholder="Login">
+                    <input class="form-control" type="submit" id="login" value="Login">
                 </div>
                 <a id="forgot-pass" href="#">Forgot password?</a>
             </form>

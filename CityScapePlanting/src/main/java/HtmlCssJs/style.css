@@ -1,0 +1,16 @@
+
+
+.container{
+    background: rgba(0,0,0,0.5) url("../../../../image/MainPages/WelcomePage.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-blend-mode: darken;
+    text-decoration: none;
+    color:white;
+}
+a{
+    text-decoration: none;
+
+}

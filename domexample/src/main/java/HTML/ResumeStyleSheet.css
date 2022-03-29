@@ -1,0 +1,11 @@
+body{
+    background-color: dimgrey;
+}
+.session1{
+    background-color: aliceblue;
+    height: 300px;
+}
+.bi-person-fill{
+    width: fit-content;
+    height: fit-content;
+}
