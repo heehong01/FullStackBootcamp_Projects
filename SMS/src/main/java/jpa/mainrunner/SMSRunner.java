@@ -3,16 +3,12 @@ package jpa.mainrunner;
 import java.util.List;
 import java.util.Scanner;
 
-import admin.CreateCourseTable;
-import admin.CreateStudentTable;
+import admin.StudentAndCourseTablesInitialization;
 import jpa.Service.CourseService;
 import jpa.Service.StudentService;
 import jpa.entitymodels.Course;
 import jpa.entitymodels.Student;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
+
 
 
 ///ADD INPUT MISMATCH EXCEPTION
@@ -29,24 +25,10 @@ public class SMSRunner {
         sb = new StringBuilder();
         courseService = new CourseService();
         studentService = new StudentService();
-        initializeTable();
+        new StudentAndCourseTablesInitialization();
 
     }
-    public void initializeTable(){
-        SessionFactory factory = new Configuration().configure().buildSessionFactory();
-        Session session = factory.openSession();
-        Transaction transaction = session.beginTransaction();
 
-        session.createSQLQuery("DROP TABLE Student_Course;").executeUpdate();
-        session.createSQLQuery("TRUNCATE TABLE Student;").executeUpdate();
-        session.createSQLQuery("TRUNCATE TABLE Course;").executeUpdate();
-
-        new CreateStudentTable(session);
-        new CreateCourseTable(session);
-        transaction.commit();
-        session.close();
-        factory.close();
-    }
     public static void main(String[] args) {
         SMSRunner sms = new SMSRunner();
         sms.run();

@@ -1,0 +1,41 @@
+.container{
+    color:white;
+    background-image: url("jakub-kapusnak-4f4YZfDMLeU-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:20%;
+    display: flex;
+    justify-content: space-between;
+}
+.subcontainer{
+    background-color: #F2B705;
+    margin:auto;
+    text-align: center;
+}
+a{
+    color: #BF4904;
+    text-decoration: none;
+
+}
+.social-network{
+    color:white;
+}
+
+#googleLogin{
+    background-color: red;
+    margin-left: 5%;
+    width: 50%;
+}
+.row{
+    display:flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.submit{
+    color: white;
+    background-color: #BF4904;
+}
+.login-form{
+    width: 75%
+
+}

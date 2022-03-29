@@ -3,14 +3,13 @@ package jpa.Service;
 import jpa.DAO.StudentDAO;
 import jpa.entitymodels.Course;
 import jpa.entitymodels.Student;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -22,16 +21,14 @@ public class StudentService implements StudentDAO {
 
     @Override
     public List<Student> getAllStudents() {
+        factory = new Configuration().configure().buildSessionFactory();
+        session = factory.openSession();
+        hql = "FROM Student";
         try{
-            factory = new Configuration().configure().buildSessionFactory();
-            session = factory.openSession();
-
-            hql = "FROM Student";
             query = session.createQuery(hql);
             List<Student> result = query.getResultList();
             return result;
         }catch (HibernateException e){
-            e.printStackTrace();
             return null;
         }finally{
             session.close();
@@ -44,15 +41,15 @@ public class StudentService implements StudentDAO {
         factory = new Configuration().configure().buildSessionFactory();
         session = factory.openSession();
         hql = "FROM Student WHERE email = :email";
-
-        query = session.createQuery(hql);
-        query.setParameter("email", sEmail);
-
         try{
+            query = session.createQuery(hql);
+            query.setParameter("email", sEmail);
             Student result = (Student) query.getSingleResult();
             return result;
         }
         catch (NoResultException e){
+            return null;
+        }catch (HibernateException e){
             return null;
         }finally{
             session.close();
@@ -63,41 +60,34 @@ public class StudentService implements StudentDAO {
     @Override
     public boolean validateStudent(String sEmail, String sPassword) {
         Student student = getStudentByEmail(sEmail);
-        if(student == null){
-            return false;
-        }
-        if(student.getsPass().contains(sPassword)){
+        if(student != null && student.getsPass().contains(sPassword)){
             return true;
         }
         return false;
-
     }
 
     @Override
     public void registerStudentToCourse(String sEmail, int cId) {
         Student student = getStudentByEmail(sEmail);
         List<Course> studentCourses= getStudentCourses(sEmail);
-        boolean isRegistered = false;
-        for(Course c : studentCourses ){
-            if(c.getcId() == cId){ //use .contains
-                isRegistered = true;
-                System.out.println("You have already registered for this course!");
-                break;
-            }
-        }
-        if(!isRegistered) {
-            factory = new Configuration().configure().buildSessionFactory();
-            session = factory.openSession();
-            Transaction t = session.beginTransaction();
-            hql = "FROM Course WHERE id = :id";
+        factory = new Configuration().configure().buildSessionFactory();
+        session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+        hql = "FROM Course WHERE id = :id";
+
+        try {
             query = session.createQuery(hql);
             query.setParameter("id", cId);
             studentCourses.add((Course) query.getSingleResult());
             student.setsCourses(studentCourses);
-            session.merge(sEmail, student);
-            t.commit();
-            factory.close();
+            session.update(sEmail, student);
+            transaction.commit();
+        }catch(HibernateException e){
+            System.out.println("You have already registered for this course!");
+        }
+        finally{
             session.close();
+            factory.close();
         }
     }
 
