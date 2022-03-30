@@ -1,6 +1,8 @@
+body{
+    height: 100%;
+}
 
-
-.container{
+.welcome-container{
     background: rgba(0,0,0,0.5) url("../../../../image/MainPages/WelcomePage.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -10,7 +12,66 @@
     text-decoration: none;
     color:white;
 }
-a{
+
+.navbar a{
     text-decoration: none;
+    font-size: 25px;
+}
+
+img{
+    border-radius: 50%;
+}
+
+.main-page, .main-section{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    flex: 2 0px;
+    display: flex;
+    align-content: center;
+    flex-flow: row wrap;
+}
+
+.main-page > *,  .main-section > *{
+    flex: 1 100%;
+}
+.main-page-row, .main-section-info{
+    flex: 1 auto;
+    align-items: center;
+
+    margin: auto;
+}
+.main-page-title, .main-section-title-motto{
+    text-align: center;
+    order: 1;
+}
+.main-page-welcome-button, .main-section-info-summary{
+    font-size: x-large;
+    order: 2;
+}
+
+
+footer{
+    padding-top: 1%;
+    position:fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
 
 }
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#loginUser{
+    color:white;
+}
+
